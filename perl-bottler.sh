@@ -5,8 +5,8 @@ pb::config() {
 	## perlbottler config
 	## adjust this according to your preferences
 	
-	PB_ROOT="${HOME}/perlbrew-here";
-	PB_HOME="${ROOT}/.perlbrew";
+	PB_ROOT="${HOME}/perlbrew";
+	PB_HOME="${PB_ROOT}/.perlbrew";
 	PB_VERSION="5.14.1";
 	PB_MODULES=(
 		Mojolicious
@@ -19,12 +19,12 @@ pb::config.set_default() {
 	## set config variables to their expected defaults
 	## do not edit
 	
-	PB_ROOT="${HOME}/perl5/perlbrew";
-	PB_HOME="${HOME}/.perlbrew";
-	PB_VERSION="5.14.1";
-	PB_MODULES=();
-	PB_TEMP="${HOME}/.pb-temp-$RANDOM";
-	PB_RMTEMPS=1;
+	PB_ROOT="${HOME}/perl5/perlbrew"; # where will be perlbrew root
+	PB_HOME="${HOME}/.perlbrew"; # where will be perlbrew home
+	PB_VERSION="5.14.1"; # what perl version should be installed
+	PB_MODULES=(); # perl modules (one per line, no delimiters)
+	PB_TEMP="${HOME}/.pb-temp-$RANDOM"; # temp directory, will be wiped
+	PB_RMTEMPS=1; # wipe temp dir after install?
 	
 	# PB_URL_PERLBREWINSTALL="http://xrl.us/perlbrewinstall"; # this was down during tests, so dereferenced link is used below
 	PB_URL_PERLBREWINSTALL="https://raw.github.com/gugod/App-perlbrew/master/perlbrew-install";
